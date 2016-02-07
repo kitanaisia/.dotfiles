@@ -76,11 +76,8 @@ PROMPT2="%{${fg[green]}%}%_> %{${reset_color}%}"
 SPROMPT="%{${fg[red]}%}correct: %R -> %r [nyae]? %{${reset_color}%}"
 RPROMPT="%{${fg[green]}%}[%~]%{${reset_color}%}"
 
-source /etc/zsh_command_not_found
-
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages/:"$PYTHONPATH
-eval "$(rbenv init -)"
 
 # for android studio
 export PATH="$HOME/Android/Sdk/tools:$HOME/Android/Sdk/platform-tools:$PATH"
@@ -115,11 +112,11 @@ function tmux_automatically_attach_session()
         ! is_exists 'tmux' && return 1
 
         if is_tmux_runnning; then
-            echo "${fg_bold[red]} _____ __  __ _   ___  __ ${reset_color}"
-            echo "${fg_bold[red]}|_   _|  \/  | | | \ \/ / ${reset_color}"
-            echo "${fg_bold[red]}  | | | |\/| | | | |\  /  ${reset_color}"
-            echo "${fg_bold[red]}  | | | |  | | |_| |/  \  ${reset_color}"
-            echo "${fg_bold[red]}  |_| |_|  |_|\___//_/\_\ ${reset_color}"
+#            echo "${fg_bold[red]} _____ __  __ _   ___  __ ${reset_color}"
+#            echo "${fg_bold[red]}|_   _|  \/  | | | \ \/ / ${reset_color}"
+#            echo "${fg_bold[red]}  | | | |\/| | | | |\  /  ${reset_color}"
+#            echo "${fg_bold[red]}  | | | |  | | |_| |/  \  ${reset_color}"
+#            echo "${fg_bold[red]}  |_| |_|  |_|\___//_/\_\ ${reset_color}"
         elif is_screen_running; then
             echo "This is on screen."
         fi
@@ -162,3 +159,4 @@ function tmux_automatically_attach_session()
     fi
 }
 tmux_automatically_attach_session
+export TMUX_TMPDIR=/var/run/tmux
