@@ -76,11 +76,8 @@ PROMPT2="%{${fg[green]}%}%_> %{${reset_color}%}"
 SPROMPT="%{${fg[red]}%}correct: %R -> %r [nyae]? %{${reset_color}%}"
 RPROMPT="%{${fg[green]}%}[%~]%{${reset_color}%}"
 
-source /etc/zsh_command_not_found
-
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages/:"$PYTHONPATH
-eval "$(rbenv init -)"
 
 # for android studio
 export PATH="$HOME/Android/Sdk/tools:$HOME/Android/Sdk/platform-tools:$PATH"
@@ -162,6 +159,10 @@ function tmux_automatically_attach_session()
     fi
 }
 tmux_automatically_attach_session
+<<<<<<< HEAD
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+=======
+export TMUX_TMPDIR=/var/run/tmux
+>>>>>>> 4244c23c7f94e12716dbe563e3c1fe6e813b0845
