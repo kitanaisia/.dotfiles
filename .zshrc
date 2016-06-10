@@ -159,10 +159,7 @@ function tmux_automatically_attach_session()
     fi
 }
 tmux_automatically_attach_session
-<<<<<<< HEAD
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-=======
 export TMUX_TMPDIR=/var/run/tmux
->>>>>>> 4244c23c7f94e12716dbe563e3c1fe6e813b0845
